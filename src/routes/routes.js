@@ -4,6 +4,7 @@ import Todo from '../Pages/Todo/Todo';
 
 const routes = [
   {path: '/', element: <Navigate to='/search'/>},
+  {path: '/home', element: <Navigate to='/search'/>},
   {path: '/search', element: <Search/>},
   {path: '/todo', element: <Todo/>}
 ]
