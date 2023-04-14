@@ -26,8 +26,8 @@ export default function NavBar() {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="/search" active={computedActive('/search')}>Search</Nav.Link>
-              <Nav.Link href="/todo" active={computedActive('/todo')}>Todo</Nav.Link>
+              <Nav.Link href="#/search" active={computedActive('/search')}>Search</Nav.Link>
+              <Nav.Link href="#/todo" active={computedActive('/todo')}>Todo</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
