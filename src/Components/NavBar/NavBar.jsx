@@ -10,14 +10,20 @@ import Icons from '../../assets/icons'
 export default function NavBar() {
 
   const location = useLocation()
-  const [theme, setTheme] = useState('dark')
+  const [theme, setTheme] = useState()
 
   function computedActive(e){
     return (e === location.pathname? true : false)
   }
 
   useEffect(() => {
+    const theme = window.localStorage.getItem('react-router6-theme')
+    setTheme(theme)
+  },[])
+
+  useEffect(() => {
     PubSub.publish('theme', theme)
+    window.localStorage.setItem('react-router6-theme', theme)
   }, [theme])
 
   function switchTheme(e){
