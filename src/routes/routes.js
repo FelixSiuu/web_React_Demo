@@ -1,6 +1,7 @@
-import { Navigate } from 'react-router';
-import Search from '../Pages/Search/Search';
-import Todo from '../Pages/Todo/Todo';
+import { lazy } from 'react'
+import { Navigate } from 'react-router'
+const Search = lazy(() => import('../Pages/Search/Search'))
+const Todo = lazy(() => import('../Pages/Todo/Todo'))
 
 const routes = [
   {path: '/', element: <Navigate to='/search'/>},

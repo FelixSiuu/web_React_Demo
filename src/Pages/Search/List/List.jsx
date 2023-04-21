@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import PubSub from 'pubsub-js'
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'

@@ -39,26 +39,31 @@ export default function Header() {
       <h1 className='mt-5'>Todo List</h1>
       <Stack gap={2} className="mx-auto mt-2">
         <Form.Control 
-          className="me-auto"
+          className="mx-auto"
           placeholder="Input your mission title (required)"
           value={mission.title} 
           onChange={(e) => {amendMission('title', e)}}
+          type='text'
         />
         <Form.Control 
-          className="me-auto" 
+          className="mx-auto" 
           as="textarea" 
           placeholder="Input your mission detail" 
           value={mission.detail} 
           onChange={(e) => {amendMission('detail', e)}}
         />
         <Button 
-          variant="success"
+          variant="primary"
           onClick={addTodo}
         >Add todo</Button>
       </Stack>
       {
         show ? (
-          <Alert variant="danger" onClose={() => setShow(false)} className='mt-3' dismissible>
+          <Alert 
+            variant='danger'
+            onClose={() => setShow(false)} 
+            className='mt-3' 
+            dismissible>
             <Alert.Heading>Oh snap! You got an error!</Alert.Heading>
             <p>
               Mission title is required

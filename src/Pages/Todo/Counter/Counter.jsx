@@ -67,7 +67,7 @@ export default function Counter() {
             onChange={switchAll}
           />
         </Form>
-        <div>
+        <div className='counter_box'>
           <span>Outstanding : {calculateStatus(false)}</span>
           {' / '}
           <span>Completed : {calculateStatus(true)}</span>

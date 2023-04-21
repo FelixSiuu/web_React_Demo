@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import PubSub from 'pubsub-js'
 import axios from 'axios'
 import Alert from 'react-bootstrap/Alert'
@@ -6,7 +6,7 @@ import { Button } from 'react-bootstrap'
 import Form from 'react-bootstrap/Form'
 import Stack from 'react-bootstrap/Stack'
 
-function Input() {
+function Input({theme}) {
 
   const [value, setValue] = useState('')
   const [isDisable, setDisable] = useState(false)
@@ -53,7 +53,8 @@ function Input() {
         className="mx-auto mt-2">
         <Form.Control 
           className="me-auto" 
-          placeholder="Add your item here..." 
+          placeholder="Add your item here..."
+          type='text'
           onKeyUp={sendRequest} 
           value={value} 
           onChange={amendValue}/>
@@ -61,7 +62,7 @@ function Input() {
         <Button variant="danger" disabled={isDisable? true : false} onClick={resetValue}>Reset</Button>
       </Stack>
       <div className="mx-auto mt-2">
-        <Alert variant={'primary'}>
+        <Alert variant={theme === 'dark' ? 'dark' : 'primary'}>
           {value === '' ? 'You are searcing...' : `You are searcing ${value}`}
         </Alert>
       </div>
