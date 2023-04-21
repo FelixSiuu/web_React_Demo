@@ -4,7 +4,7 @@ import NavBar from './Components/NavBar/NavBar'
 import { useRoutes } from 'react-router-dom'
 import PubSub from 'pubsub-js'
 import routes from './routes/routes.js'
-import './app.css'
+import './App.css'
 
 export const ThemeContext = createContext() 
 
