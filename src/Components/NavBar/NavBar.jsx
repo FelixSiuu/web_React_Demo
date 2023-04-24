@@ -19,7 +19,7 @@ export default function NavBar() {
   useEffect(() => {
     const theme = window.localStorage.getItem('react-router6-theme')
     if(theme === null){
-      setTheme(null)
+      setTheme('light')
     }else{
       setTheme(theme)
     }
